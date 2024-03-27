@@ -1,4 +1,3 @@
-
 import CardComponent from "@/components/cards/CardComponent";
 import { UserType } from "@/types/user";
 import { Suspense } from "react";
@@ -12,9 +11,9 @@ async function fetchUser() {
 		headers: {
 			"Content-Type": "application/json",
 		},
-		next:{
-			revalidate: 30 // (30 second it will fetch the data again from the server)
-		}
+		next: {
+			revalidate: 30, // (30 second it will fetch the data again from the server)
+		},
 	});
 	const res = await user.json();
 	return res.users;
@@ -24,6 +23,12 @@ export default async function Home() {
 	const user = await fetchUser();
 	return (
 		<>
+			<div className="text-center mt-5">
+				<h1 className="text-3xl font-bold">This is poppin font</h1>
+				<h1 className="text-3xl font-bold">
+					នេះគឺជាការប្រើប្រាស់ font នៅក្នុង nextJs
+				</h1>
+			</div>
 			<div className="mt-10 flex justify-center flex-wrap gap-5">
 				<Suspense fallback={<LoadingComponent />}>
 					{user?.map((user: UserType) => (
@@ -31,7 +36,6 @@ export default async function Home() {
 							image={user.image}
 							firstName={user.firstName}
 							key={user.id}
-						
 						/>
 					))}
 				</Suspense>
