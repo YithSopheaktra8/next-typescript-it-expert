@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: 
+Sitemap: https://next-typescript-it-expert.vercel.app/sitemap.xml
