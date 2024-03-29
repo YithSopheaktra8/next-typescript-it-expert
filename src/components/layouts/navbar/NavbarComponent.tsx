@@ -14,8 +14,8 @@ import { menuNav } from "./menu";
 
 export default function NavbarComponent() {
 	const pathname = usePathname();
-	if (pathname.includes("/dashboard")) return null;
-	else
+		// if (pathname.includes("/dashboard")) return null;
+		// else
 		return (
 			<Navbar className="bg-blue-200">
 				<NavbarBrand>

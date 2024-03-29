@@ -1,14 +1,14 @@
 import DashboardSidebar from "@/components/dashboard/DashboardSidebar";
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-   <aside className="flex">
-   <DashboardSidebar/>
-    {children}
-   </aside>
-  );
+	return (
+		<aside className="flex">
+			<DashboardSidebar />
+			{children}
+		</aside>
+	);
 }
